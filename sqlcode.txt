@@ -1,0 +1,34 @@
+<html>
+
+<?php
+$servername = "";
+$username = "admin";
+$password = "ninelakestreet";
+
+
+$conn = new mysqli($servername, $username, $password);
+
+if(conn -> connect_error) {
+    die("Connection failed: " .$conn->connect_error);
+}
+echo "Connected successfully"
+
+
+$sql = "CREATE TABLE Events (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    eventName VARCHAR(256) NOT NULL,
+    location VARCHAR(256) NOT NULL,
+    currentNumNinjas INT(6) UNSIGNED DEFAULT 0,
+    minNinjasForSuccess INT(6) UNSIGNED,
+    maxNinjas INT(6) UNSIGNED
+)";
+
+if($conn->query($sql) == TRUE) {
+    echco "Database created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
+
+$conn->close();
+></html>
