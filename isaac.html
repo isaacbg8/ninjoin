@@ -15,12 +15,14 @@
   <style>
     #addEvent {
       display: none;
-      margin: 30px 30px 30px 25%;
-      width: 50%;
+      padding: 30px 25% 30px 25%;
+      width: 100%;
       height: 50%;
+      background-color: lavenderblush;
     }
 
-    .header {
+    #header {
+      display: none;
       width: 100%;
       height: 200px;
       background-color: lightblue;
@@ -32,25 +34,26 @@
     @media only screen and (max-width: 650px) {
       #addEvent {
         width: 100%;
-        margin-top: 30px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
+        padding-top: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
         width: 100%;
         height: 100%;
+        
       }
     }
   </style>
   <script>
   
     $( document ).ready(function() {
-      $("#header").fadeIn(1000, function(){
-        $("#addEvent").fadeIn(1000);
+      $("#header").fadeIn(800, function(){
+        $("#addEvent").fadeIn(300);
       });
     });
   </script>
 
-  <div class="header">
+  <div id="header">
     Ninjoin
   </div>
 
