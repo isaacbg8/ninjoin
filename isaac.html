@@ -44,7 +44,9 @@
   <script>
   
     $( document ).ready(function() {
-      $("#addEvent").fadeIn(1000);
+      $("#header").fadeIn(1000, function(){
+        $("#addEvent").fadeIn(1000);
+      });
     });
   </script>
 
